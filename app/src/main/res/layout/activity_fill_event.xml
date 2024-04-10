@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_blue"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".RegisterActivity"
+    >
+
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/so_dien_thoai"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        android:background="@drawable/custom_edit_text"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="@string/firstname"-->
+    <!--        android:inputType="text"-->
+    <!--        android:padding="@dimen/padsize15"-->
+    <!--        android:textColorHint="@color/gray" />-->
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:layout_marginTop="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_Back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:background="@color/main_blue"
+
+                android:drawableEnd="@drawable/baseline_west_24"
+
+                android:textColor="@color/black"
+                android:text="Back"
+                android:textSize="18dp"
+                app:backgroundTint="@null"
+                />
+
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="425dp"
+                android:layout_height="70dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+
+                android:rotationX="-4"
+                android:rotationY="-2"
+                android:src="@drawable/logo" />
+
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/editEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:hint="@string/eventName"
+        android:inputType="text"
+
+        android:padding="@dimen/padsize12"
+        android:textColorHint="@color/gray" />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <Button
+                android:id="@+id/button_setHour"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/custom_edit_text"
+
+                android:drawableEnd="@drawable/baseline_access_time_24"
+                android:hint="@string/setHour"
+                android:textColor="@color/gray"
+                android:textSize="18dp"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:id="@+id/button_setDate"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:drawableEnd="@drawable/baseline_calendar_month_24"
+                android:background="@drawable/custom_edit_text"
+                android:gravity="left"
+                android:hint="@string/setDate"
+                android:textColor="@color/gray"
+                android:textSize="18dp"
+                app:backgroundTint="@null" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="69dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:padding="8dp"
+                    android:hint="Thành phố"
+                    android:text="thành phố"
+                    android:textColor="@color/gray"
+                    android:textSize="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:padding="8dp"
+                    android:hint="Quận/huyện"
+                    android:text="quân"
+                    android:textColor="@color/gray"
+
+                    android:textSize="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextVillage"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:padding="8dp"
+                    android:hint="Xã phường"
+                    android:text="xã"
+                    android:textColor="@color/gray"
+                    android:textSize="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+    </TableLayout>
+    <EditText
+        android:id="@+id/editTextStreet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:hint="@string/street"
+        android:inputType="text"
+
+        android:padding="@dimen/padsize12"
+        android:textColorHint="@color/gray" />
+    <EditText
+        android:id="@+id/editTextDescribe"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:background="@drawable/describe"
+        android:ems="10"
+        android:hint="Mô tả"
+
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/padsize12"
+        android:textColorHint="@color/gray" />
+
+    <Button
+        android:id="@+id/button_createEvent"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:text="TẠO SỰ KIỆN"
+        android:textSize="20dp"
+
+        app:backgroundTint="@null" />
+
+
+
+
+</LinearLayout>
